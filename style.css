@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap'); 
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: rgba(162, 159, 152, 1);
+	color: rgba(39, 29, 25, 1);
+}
+
+h1 {
+	text-transform: uppercase;
+	font-family: 'Unbounded', cursive;
+}
+
+p {
+	font-family: 'Comfortaa', cursive;
+}
+
+header {
+    background-color: rgba(102, 83, 72, 1);
+	color: rgba(245, 240, 228, 1);
+    height: 5vh;
+    display: flex;
+    padding: 1em;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+header h1 {
+    margin: 0;
+    padding: 0 1em;
+	text-transform: uppercase;
+}
+
+header .menu {
+	display: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 0 1em;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: rgba(245, 240, 228, 1);
+	text-transform: uppercase;
+	font-family: 'Unbounded', cursive;
+}
+
+header #navBtn {
+	display: none;
+}
+
+main .welcomeSect {
+    min-height: 50vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./media/compClass3.jpg");
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	color: rgba(245, 240, 228, 1);
+}
+
+main .whoAreWe {
+    min-height: 50vh; 
+    display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	text-align: center;
+}
+
+.whoAreWeImg {
+	flex: 0 0 50%;
+}
+
+.whoAreWeImg img {
+	object-fit: cover;
+	width: 30em;
+}
+
+.whoAreWeDesc {
+    text-align: center;
+	flex: 0 0 50%;
+}
+
+.whoAreWeDesc p {
+    width: 20em;
+	margin: auto;
+}
+
+main .ourGoal {
+    min-height: 50vh; 
+    display: flex;
+    align-items: center;
+	text-align: center;
+	flex-wrap: wrap;
+}
+
+.ourGoalImg {
+	flex: 0 0 50%;
+}
+
+.ourGoalImg img {
+ 	object-fit: cover;
+	width: 30em;
+}
+
+.ourGoalDesc {
+    text-align: center;
+	flex: 0 0 50%;
+}
+
+.ourGoalDesc p {
+    width: 20em;
+	margin: auto;
+}
+
+.reviewBox {
+	min-height: 75vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.reviewBox .reviewTitle {
+	text-align: center;
+	margin: 2em 0;
+}
+
+.review {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.review div {
+	flex: 0 0 33.3%;
+	text-align: center;
+	min-height: 35em;
+	display: flex;
+	flex-direction: column;
+}
+
+.review div img {
+	width: 15em;
+	height: 15em;
+	border-radius: 1000em;
+	object-fit: cover;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+}
+
+.review div p {
+	width: 20em;
+	margin: auto;
+}
+
+.joinNow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 30vh;
+}
+
+.joinNow button {
+	background-color: rgba(102, 83, 72, 1);
+	border-color: transparent;
+	padding: 2em;
+}
+
+.joinNow button a {
+	color: rgba(245, 240, 228, 1);
+	text-decoration: none;
+}
+
+.joinNow button a h1 {
+	font-size: 1em;
+	width: 10em;
+}
+
+@media (max-width: 1080px) {
+	* {
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	header {
+		padding: 1em 0;
+	}
+	
+	header nav {
+		width: 100%;
+		background-color: rgba(102, 83, 72, 1);
+		position: absolute;
+		margin-top: 18em;
+		display: none;
+	}	
+	
+	nav ul {
+		width: 100%;
+	}
+
+	nav ul li {
+		display: flex;
+		width: 100%;
+		height: 5em;
+		padding: 0;
+	}
+
+	nav ul li a {
+		display: flex;
+		width: 100%;
+		height: 100%;
+	}
+
+	#navBtn:checked ~ nav {
+		display: flex;
+	}
+
+	header .menu {
+		padding: 0 2em;
+		display: flex;
+	}
+
+	.whoAreWe {
+		padding: 3em 0em;
+	}
+
+	.whoAreWe img, .ourGoal img {
+		width: 20em;
+	}
+
+	.ourGoal {
+		flex-direction: column-reverse;
+	}
+}
